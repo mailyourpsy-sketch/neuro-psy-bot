@@ -367,7 +367,7 @@ def main():
     app.add_handler(CommandHandler("addcredits", admin_addcredits))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, on_text))
     app.add_handler(MessageHandler(filters.COMMAND, balance))  # unknown commands -> balance/help-ish
-    app.add_handler(MessageHandler(filters.UpdateType.CALLBACK_QUERY, on_callback))
+    app.add_handler(CallbackQueryHandler(on_callback))
 
     port = int(os.environ.get("PORT", "8080"))
 
