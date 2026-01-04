@@ -35,7 +35,7 @@ BUY_KEYBOARD = ReplyKeyboardMarkup(
     resize_keyboard=True,
 )
 
-BUY_RE = re.compile(r"Купить\s+(30|100|300)", re.IGNORECASE)
+BUY_RE = re.compile(r"Купить\s+(300|100|30)", re.IGNORECASE)
 
 
 async def buy(update: Update, context: ContextTypes.DEFAULT_TYPE):
